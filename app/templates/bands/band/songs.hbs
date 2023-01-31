@@ -1,4 +1,7 @@
-{{#if @model.length}} <ul>
+{{page-title "Songs | Rock & Roll with Octane" replace=true}}
+
+{{#if @model.length}}
+  <ul>
     {{#each @model as |song|}}
       <li class="mb-2">
         {{song.title}}
