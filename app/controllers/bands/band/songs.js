@@ -1,13 +1,13 @@
 import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
-import { Song } from 'rarwe/routes/bands';
+import Song from 'rarwe/models/song';
 import { inject as service } from '@ember/service';
 
 export default class BandsBandSongsController extends Controller {
   @tracked showAddSong = true;
   @tracked title = '';
-  
+
   @service catalog;
 
   @action
