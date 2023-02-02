@@ -9,7 +9,7 @@ export default class BandsBandSongsRoute extends Route {
     await this.catalog.fetchRelated(band, 'songs');
     return band;
   }
-  
+
   resetController(controller) {
     controller.title = '';
     controller.showAddSong = true;
