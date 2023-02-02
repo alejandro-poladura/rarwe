@@ -6,7 +6,10 @@
       <li class="mb-2">
         {{song.title}}
         <span class="float-right">
-          <StarRating @rating={{song.rating}} @onUpdate={{set song "rating"}} />
+          <StarRating
+            @rating={{song.rating}}
+            @onUpdate={{fn this.updateRating song}}
+          />
         </span>
       </li>
     {{/each}}
@@ -16,14 +19,6 @@
     The band has no songs yet.
   </p>
 {{/if}}
-{{! <div class="flex justify-center mt-2">
-  <button
-    type="button"
-    class="px-4 py-2 rounded bg-purple-600 shadow-md hover:shadow-lg hover:text-white hover:bg-purple-500 focus:outline-none"
-  >
-    Add song
-  </button>
-</div> }}
 {{#if this.showAddSong}}
   <div class="flex justify-center mt-2">
     <button
