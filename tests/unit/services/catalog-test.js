@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { setupTest } from 'rarwe/tests/helpers';
+import { setupTest } from 'ember-qunit';
 import Band from 'rarwe/models/band';
 import Song from 'rarwe/models/song';
 
